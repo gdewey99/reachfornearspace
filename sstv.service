@@ -1,0 +1,14 @@
+[Unit]
+Description=SSTV
+After=network.target
+
+[Service]
+ExecStart=/bin/sh sstv.sh
+WorkingDirectory=/home/pi/SSTV
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
